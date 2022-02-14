@@ -93,7 +93,6 @@ def net_mask2(n, s, i):
     return ip_in(mask2), ip_in(mask3)
 
 
-
 def main():
     ip = ip_in(input("Введите ip:"))
     if ip == error:
@@ -137,7 +136,7 @@ def main():
         print("Подсеть", i)
         m = net_mask(net[4], nets, i)
         print("Маска:", ip_out(to_bin(m)))
-        m = net_mask2(''.join(to_bin(ip)[0:net[4]//8]), nets, i)
+        m = net_mask2(''.join(to_bin(ip)[0:net[4] // 8]), nets, i)
         print("Начало сети:", ip_out(m[0]))
         print("Конец сети:", ip_out(m[1]))
         print("Первые 5 допустимых IP-адресов:")
